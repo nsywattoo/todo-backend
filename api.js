@@ -36,7 +36,7 @@ router.post('/:id/complete', async (req, res) => {
 
 // Route for deleting a todo
 
-router.delete("/:id", async (req, res) => {
+router.delete("/todos/:id", async (req, res) => {
   const { id } = req.params;
   const newTodo = await Todo.findByIdAndDelete(id);
    res.status(201).json({ message: 'deleted successfully', data: newTodo });
