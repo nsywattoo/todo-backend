@@ -32,7 +32,7 @@ const Todo = require('./model');
 
 // Routes (in a separate file)
 const todoRoutes = require('./api');
-app.use('/todos', todoRoutes);
+app.use('/', todoRoutes);
 
 
 
